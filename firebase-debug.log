@@ -1,0 +1,727 @@
+[debug] [2022-09-14T04:05:15.245Z] ----------------------------------------------------------------------
+[debug] [2022-09-14T04:05:15.247Z] Command:       /home/ldrbx/.nvm/versions/node/v16.15.1/bin/node /home/ldrbx/.nvm/versions/node/v16.15.1/bin/firebase emulators:start
+[debug] [2022-09-14T04:05:15.248Z] CLI Version:   11.9.0
+[debug] [2022-09-14T04:05:15.248Z] Platform:      linux
+[debug] [2022-09-14T04:05:15.248Z] Node Version:  v16.15.1
+[debug] [2022-09-14T04:05:15.252Z] Time:          Wed Sep 14 2022 00:05:15 GMT-0400 (Eastern Daylight Time)
+[debug] [2022-09-14T04:05:15.252Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-09-14T04:05:15.339Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-09-14T04:05:15.340Z] > authorizing via signed-in user (loic.drbx@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2022-09-14T04:05:15.356Z] [hub] writing locator at /tmp/hub-safari-text.json
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage, eventarc {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage, eventarc\u001b[22m"}}
+[info] ✔  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[debug] [2022-09-14T04:05:15.399Z] defaultcredentials: writing to file /home/ldrbx/.config/firebase/loic_drbx_gmail.com_application_default_credentials.json
+[debug] [2022-09-14T04:05:15.402Z] Setting GAC to /home/ldrbx/.config/firebase/loic_drbx_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /home/ldrbx/.config/firebase/loic_drbx_gmail.com_application_default_credentials.json"}}
+[debug] [2022-09-14T04:05:15.404Z] > refreshing access token with scopes: []
+[debug] [2022-09-14T04:05:15.407Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-09-14T04:05:15.407Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-09-14T04:05:15.652Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-09-14T04:05:15.653Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-09-14T04:05:15.670Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/safari-text/adminSdkConfig [none]
+[debug] [2022-09-14T04:05:16.012Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/safari-text/adminSdkConfig 200
+[debug] [2022-09-14T04:05:16.013Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/safari-text/adminSdkConfig {"projectId":"safari-text","storageBucket":"safari-text.appspot.com","locationId":"europe-west"}
+[debug] [2022-09-14T04:05:16.046Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-09-14T04:05:16.046Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-09-14T04:05:16.046Z] Starting Emulator UI with command {"binary":"node","args":["/home/ldrbx/.cache/firebase/emulators/ui-v1.9.0/server/server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/home/ldrbx/.cache/firebase/emulators/ui-v1.9.0/server/server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-09-14T04:05:16.281Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[info] i  functions: Watching "/home/ldrbx/hackathons/eth-safari/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/home/ldrbx/hackathons/eth-safari/functions\" for Cloud Functions..."}}
+[debug] [2022-09-14T04:05:16.320Z] Validating nodejs source
+[debug] [2022-09-14T04:05:17.920Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "twilio": "^3.82.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-09-14T04:05:17.920Z] Building nodejs source
+[debug] [2022-09-14T04:05:17.920Z] Analyzing nodejs backend spec
+[debug] [2022-09-14T04:05:17.929Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-09-14T04:05:18.098Z] Serving at port 9005
+
+[debug] [2022-09-14T04:05:18.200Z] Got response from /__/functions.yaml Failed to generate manifest from function source: Error: username is required
+[debug] [2022-09-14T04:05:18.205Z] Failed to parse functions.yamlincomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:
+     ... fest from function source: Error: username is required
+                                         ^ {"name":"YAMLException","reason":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line","mark":{"name":null,"buffer":"Failed to generate manifest from function source: Error: username is required\n\u0000","position":55,"line":0,"column":55},"message":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:\n     ... fest from function source: Error: username is required\n                                         ^"}
+[debug] [2022-09-14T04:05:18.214Z] shutdown requested via /__/quitquitquit
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: username is required {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: username is required"}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000                │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2022-09-14T04:07:11.644Z] File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers"}}
+[debug] [2022-09-14T04:07:12.646Z] Validating nodejs source
+[debug] [2022-09-14T04:07:14.472Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "twilio": "^3.82.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-09-14T04:07:14.473Z] Building nodejs source
+[debug] [2022-09-14T04:07:14.473Z] Analyzing nodejs backend spec
+[debug] [2022-09-14T04:07:14.474Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-09-14T04:07:14.661Z] Serving at port 9005
+
+[debug] [2022-09-14T04:07:14.766Z] Got response from /__/functions.yaml Failed to generate manifest from function source: Error: username is required
+[debug] [2022-09-14T04:07:14.767Z] Failed to parse functions.yamlincomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:
+     ... fest from function source: Error: username is required
+                                         ^ {"name":"YAMLException","reason":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line","mark":{"name":null,"buffer":"Failed to generate manifest from function source: Error: username is required\n\u0000","position":55,"line":0,"column":55},"message":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:\n     ... fest from function source: Error: username is required\n                                         ^"}
+[debug] [2022-09-14T04:07:14.774Z] shutdown requested via /__/quitquitquit
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: username is required {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: username is required"}}
+[debug] [2022-09-14T04:07:26.638Z] File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers"}}
+[debug] [2022-09-14T04:07:27.640Z] Validating nodejs source
+[debug] [2022-09-14T04:07:29.107Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "twilio": "^3.82.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-09-14T04:07:29.108Z] Building nodejs source
+[debug] [2022-09-14T04:07:29.108Z] Analyzing nodejs backend spec
+[debug] [2022-09-14T04:07:29.111Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-09-14T04:07:29.295Z] Serving at port 9005
+
+[debug] [2022-09-14T04:07:29.357Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-09-14T04:07:29.367Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2022-09-14T04:09:29.270Z] File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers"}}
+[debug] [2022-09-14T04:09:30.272Z] Validating nodejs source
+[debug] [2022-09-14T04:09:31.918Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "twilio": "^3.82.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-09-14T04:09:31.918Z] Building nodejs source
+[debug] [2022-09-14T04:09:31.919Z] Analyzing nodejs backend spec
+[debug] [2022-09-14T04:09:31.920Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-09-14T04:09:32.114Z] Serving at port 9005
+
+[debug] [2022-09-14T04:09:32.223Z] Got response from /__/functions.yaml Failed to generate manifest from function source: Error: accountSid must start with AC
+[debug] [2022-09-14T04:09:32.224Z] Failed to parse functions.yamlincomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:
+     ... fest from function source: Error: accountSid must start with AC
+                                         ^ {"name":"YAMLException","reason":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line","mark":{"name":null,"buffer":"Failed to generate manifest from function source: Error: accountSid must start with AC\n\u0000","position":55,"line":0,"column":55},"message":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:\n     ... fest from function source: Error: accountSid must start with AC\n                                         ^"}
+[debug] [2022-09-14T04:09:32.230Z] shutdown requested via /__/quitquitquit
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: accountSid must start with AC {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: accountSid must start with AC"}}
+[debug] [2022-09-14T04:09:55.394Z] File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers"}}
+[debug] [2022-09-14T04:09:56.396Z] Validating nodejs source
+[debug] [2022-09-14T04:09:57.979Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "twilio": "^3.82.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-09-14T04:09:57.979Z] Building nodejs source
+[debug] [2022-09-14T04:09:57.979Z] Analyzing nodejs backend spec
+[debug] [2022-09-14T04:09:57.980Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-09-14T04:09:58.160Z] Serving at port 9005
+
+[debug] [2022-09-14T04:09:58.261Z] Got response from /__/functions.yaml Failed to generate manifest from function source: Error: accountSid must start with AC
+[debug] [2022-09-14T04:09:58.262Z] Failed to parse functions.yamlincomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:
+     ... fest from function source: Error: accountSid must start with AC
+                                         ^ {"name":"YAMLException","reason":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line","mark":{"name":null,"buffer":"Failed to generate manifest from function source: Error: accountSid must start with AC\n\u0000","position":55,"line":0,"column":55},"message":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:\n     ... fest from function source: Error: accountSid must start with AC\n                                         ^"}
+[debug] [2022-09-14T04:09:58.268Z] shutdown requested via /__/quitquitquit
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: accountSid must start with AC {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: accountSid must start with AC"}}
+[debug] [2022-09-14T04:10:54.122Z] File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers"}}
+[debug] [2022-09-14T04:10:55.124Z] Validating nodejs source
+[debug] [2022-09-14T04:10:56.669Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "twilio": "^3.82.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-09-14T04:10:56.670Z] Building nodejs source
+[debug] [2022-09-14T04:10:56.670Z] Analyzing nodejs backend spec
+[debug] [2022-09-14T04:10:56.670Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-09-14T04:10:56.833Z] Serving at port 9005
+
+[debug] [2022-09-14T04:10:56.939Z] Got response from /__/functions.yaml Failed to generate manifest from function source: Error: accountSid must start with AC
+[debug] [2022-09-14T04:10:56.939Z] Failed to parse functions.yamlincomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:
+     ... fest from function source: Error: accountSid must start with AC
+                                         ^ {"name":"YAMLException","reason":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line","mark":{"name":null,"buffer":"Failed to generate manifest from function source: Error: accountSid must start with AC\n\u0000","position":55,"line":0,"column":55},"message":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:\n     ... fest from function source: Error: accountSid must start with AC\n                                         ^"}
+[debug] [2022-09-14T04:10:56.945Z] shutdown requested via /__/quitquitquit
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: accountSid must start with AC {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: accountSid must start with AC"}}
+[debug] [2022-09-14T04:11:07.565Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-09-14T04:11:07.566Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-09-14T04:11:07.570Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-09-14T04:11:21.561Z] File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers"}}
+[debug] [2022-09-14T04:11:22.564Z] Validating nodejs source
+[debug] [2022-09-14T04:11:24.052Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "twilio": "^3.82.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-09-14T04:11:24.053Z] Building nodejs source
+[debug] [2022-09-14T04:11:24.053Z] Analyzing nodejs backend spec
+[debug] [2022-09-14T04:11:24.054Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-09-14T04:11:24.250Z] Serving at port 9005
+
+[debug] [2022-09-14T04:11:24.351Z] Got response from /__/functions.yaml Failed to generate manifest from function source: Error: accountSid must start with AC
+[debug] [2022-09-14T04:11:24.352Z] Failed to parse functions.yamlincomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:
+     ... fest from function source: Error: accountSid must start with AC
+                                         ^ {"name":"YAMLException","reason":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line","mark":{"name":null,"buffer":"Failed to generate manifest from function source: Error: accountSid must start with AC\n\u0000","position":55,"line":0,"column":55},"message":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:\n     ... fest from function source: Error: accountSid must start with AC\n                                         ^"}
+[debug] [2022-09-14T04:11:24.358Z] shutdown requested via /__/quitquitquit
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: accountSid must start with AC {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: accountSid must start with AC"}}
+[debug] [2022-09-14T04:11:50.550Z] File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers"}}
+[debug] [2022-09-14T04:11:51.553Z] Validating nodejs source
+[debug] [2022-09-14T04:11:53.014Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "twilio": "^3.82.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-09-14T04:11:53.014Z] Building nodejs source
+[debug] [2022-09-14T04:11:53.014Z] Analyzing nodejs backend spec
+[debug] [2022-09-14T04:11:53.015Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-09-14T04:11:53.196Z] Serving at port 9005
+
+[debug] [2022-09-14T04:11:53.300Z] Got response from /__/functions.yaml Failed to generate manifest from function source: Error: accountSid must start with AC
+[debug] [2022-09-14T04:11:53.301Z] Failed to parse functions.yamlincomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:
+     ... fest from function source: Error: accountSid must start with AC
+                                         ^ {"name":"YAMLException","reason":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line","mark":{"name":null,"buffer":"Failed to generate manifest from function source: Error: accountSid must start with AC\n\u0000","position":55,"line":0,"column":55},"message":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:\n     ... fest from function source: Error: accountSid must start with AC\n                                         ^"}
+[debug] [2022-09-14T04:11:53.307Z] shutdown requested via /__/quitquitquit
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: accountSid must start with AC {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: accountSid must start with AC"}}
+[debug] [2022-09-14T04:13:17.210Z] File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers"}}
+[debug] [2022-09-14T04:13:18.213Z] Validating nodejs source
+[debug] [2022-09-14T04:13:20.047Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "twilio": "^3.82.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-09-14T04:13:20.048Z] Building nodejs source
+[debug] [2022-09-14T04:13:20.048Z] Analyzing nodejs backend spec
+[debug] [2022-09-14T04:13:20.049Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-09-14T04:13:20.216Z] Serving at port 9005
+
+[debug] [2022-09-14T04:13:20.319Z] Got response from /__/functions.yaml Failed to generate manifest from function source: Error: accountSid must start with AC
+[debug] [2022-09-14T04:13:20.320Z] Failed to parse functions.yamlincomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:
+     ... fest from function source: Error: accountSid must start with AC
+                                         ^ {"name":"YAMLException","reason":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line","mark":{"name":null,"buffer":"Failed to generate manifest from function source: Error: accountSid must start with AC\n\u0000","position":55,"line":0,"column":55},"message":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:\n     ... fest from function source: Error: accountSid must start with AC\n                                         ^"}
+[debug] [2022-09-14T04:13:20.325Z] shutdown requested via /__/quitquitquit
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: accountSid must start with AC {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: accountSid must start with AC"}}
+[debug] [2022-09-14T04:20:04.840Z] File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers"}}
+[debug] [2022-09-14T04:20:05.843Z] Validating nodejs source
+[debug] [2022-09-14T04:20:07.570Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "twilio": "^3.82.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-09-14T04:20:07.570Z] Building nodejs source
+[debug] [2022-09-14T04:20:07.570Z] Analyzing nodejs backend spec
+[debug] [2022-09-14T04:20:07.571Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-09-14T04:20:07.746Z] Serving at port 9005
+
+[debug] [2022-09-14T04:20:07.852Z] Got response from /__/functions.yaml Failed to generate manifest from function source: Error: accountSid must start with AC
+[debug] [2022-09-14T04:20:07.853Z] Failed to parse functions.yamlincomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:
+     ... fest from function source: Error: accountSid must start with AC
+                                         ^ {"name":"YAMLException","reason":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line","mark":{"name":null,"buffer":"Failed to generate manifest from function source: Error: accountSid must start with AC\n\u0000","position":55,"line":0,"column":55},"message":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:\n     ... fest from function source: Error: accountSid must start with AC\n                                         ^"}
+[debug] [2022-09-14T04:20:07.859Z] shutdown requested via /__/quitquitquit
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: accountSid must start with AC {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: accountSid must start with AC"}}
+[debug] [2022-09-14T04:24:32.008Z] File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers"}}
+[debug] [2022-09-14T04:24:33.015Z] Validating nodejs source
+[debug] [2022-09-14T04:24:34.664Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "twilio": "^3.82.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-09-14T04:24:34.665Z] Building nodejs source
+[debug] [2022-09-14T04:24:34.665Z] Analyzing nodejs backend spec
+[debug] [2022-09-14T04:24:34.666Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-09-14T04:24:34.857Z] Serving at port 9005
+
+[debug] [2022-09-14T04:24:34.964Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-09-14T04:24:34.972Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[info] ✔  functions[us-central1-helloWorld]: http function initialized (http://127.0.0.1:5001/safari-text/us-central1/helloWorld). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/safari-text/us-central1/helloWorld)."}}
+[debug] [2022-09-14T04:25:00.113Z] File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers"}}
+[debug] [2022-09-14T04:25:01.118Z] Validating nodejs source
+[debug] [2022-09-14T04:25:02.601Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "twilio": "^3.82.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-09-14T04:25:02.601Z] Building nodejs source
+[debug] [2022-09-14T04:25:02.601Z] Analyzing nodejs backend spec
+[debug] [2022-09-14T04:25:02.602Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-09-14T04:25:02.778Z] Serving at port 9005
+
+[debug] [2022-09-14T04:25:02.880Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-09-14T04:25:02.888Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2022-09-14T04:25:10.943Z] File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers"}}
+[debug] [2022-09-14T04:25:11.945Z] Validating nodejs source
+[debug] [2022-09-14T04:25:13.516Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "twilio": "^3.82.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-09-14T04:25:13.516Z] Building nodejs source
+[debug] [2022-09-14T04:25:13.516Z] Analyzing nodejs backend spec
+[debug] [2022-09-14T04:25:13.517Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-09-14T04:25:13.716Z] Serving at port 9005
+
+[debug] [2022-09-14T04:25:13.822Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-09-14T04:25:13.829Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2022-09-14T04:25:39.171Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-09-14T04:25:39.172Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-09-14T04:25:39.172Z] Accepted request GET /safari-text/us-central1/helloWorld --> us-central1-helloWorld
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2022-09-14T04:25:39.198Z] [worker-pool] addWorker(us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-helloWorld)"}}
+[debug] [2022-09-14T04:25:39.198Z] [worker-pool] Adding worker with key us-central1-helloWorld, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-helloWorld, total=1"}}
+[debug] [2022-09-14T04:25:39.199Z] [worker-pool] submitWork(triggerId=us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-helloWorld)"}}
+[debug] [2022-09-14T04:25:39.199Z] [worker-us-central1-helloWorld-38d98580-ec09-4501-872c-59157e78b742]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-38d98580-ec09-4501-872c-59157e78b742]: BUSY"}}
+[debug] [2022-09-14T04:25:40.244Z] [runtime-status] [6395] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6395] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-09-14T04:25:40.246Z] [runtime-status] [6395] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.23.0","resolution":"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6395] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.23.0\",\"resolution\":\"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-09-14T04:25:40.247Z] [runtime-status] [6395] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6395] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-09-14T04:25:40.248Z] [runtime-status] [6395] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.23.0","resolution":"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6395] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.23.0\",\"resolution\":\"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-09-14T04:25:40.308Z] [runtime-status] [6395] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6395] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-09-14T04:25:40.309Z] [runtime-status] [6395] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.23.0","resolution":"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6395] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.23.0\",\"resolution\":\"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2022-09-14T04:25:40.310Z] [runtime-status] [6395] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.23.0","resolution":"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6395] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.23.0\",\"resolution\":\"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-09-14T04:25:40.311Z] [runtime-status] [6395] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6395] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-09-14T04:25:40.312Z] [runtime-status] [6395] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.23.0","resolution":"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6395] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.23.0\",\"resolution\":\"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-09-14T04:25:40.313Z] [runtime-status] [6395] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6395] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2022-09-14T04:25:40.313Z] [runtime-status] [6395] Functions runtime initialized. {"cwd":"/home/ldrbx/hackathons/eth-safari/functions","node_version":"16.15.1"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6395] Functions runtime initialized. {\"cwd\":\"/home/ldrbx/hackathons/eth-safari/functions\",\"node_version\":\"16.15.1\"}"}}
+[debug] [2022-09-14T04:25:40.365Z] [runtime-status] [6395] Beginning invocation function helloWorld! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6395] Beginning invocation function helloWorld!"}}
+[info] i  functions: Beginning execution of "helloWorld" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Beginning execution of \"helloWorld\""}}
+[debug] [2022-09-14T04:25:40.366Z] [runtime-status] [6395] Running helloWorld in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6395] Running helloWorld in signature http"}}
+[debug] [2022-09-14T04:25:40.373Z] [runtime-status] [6395] Listening to port: /tmp/fire_emu_2791b3a1256f9fe1.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6395] Listening to port: /tmp/fire_emu_2791b3a1256f9fe1.sock"}}
+[debug] [2022-09-14T04:25:40.429Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-09-14T04:25:40.430Z] [functions] Got req.url=/safari-text/us-central1/helloWorld, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/safari-text/us-central1/helloWorld, mapping to path=/"}}
+[debug] [2022-09-14T04:25:40.433Z] [runtime-status] [6395] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6395] Ephemeral server handling GET request"}}
+[info] >  {"structuredData":true,"severity":"INFO","message":"Hello logs!"} {"user":{"structuredData":true,"severity":"INFO","message":"Hello logs!"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"structuredData\":true,\"severity\":\"INFO\",\"message\":\"Hello logs!\"}"}}
+[debug] [2022-09-14T04:25:40.674Z] [runtime-status] [6395] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6395] Ephemeral server survived."}}
+[warn] ⚠  functions: TypeError: Cannot read properties of undefined (reading 'NUMBER')
+    at /home/ldrbx/hackathons/eth-safari/functions/index.js:17:32
+    at cloudFunction (/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-functions/lib/providers/https.js:50:16)
+    at /home/ldrbx/.nvm/versions/node/v16.15.1/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:592:16
+    at runFunction (/home/ldrbx/.nvm/versions/node/v16.15.1/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:565:15)
+    at runHTTPS (/home/ldrbx/.nvm/versions/node/v16.15.1/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:591:11)
+    at /home/ldrbx/.nvm/versions/node/v16.15.1/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:534:23
+    at Layer.handle [as handle_request] (/home/ldrbx/.nvm/versions/node/v16.15.1/lib/node_modules/firebase-tools/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ldrbx/.nvm/versions/node/v16.15.1/lib/node_modules/firebase-tools/node_modules/express/lib/router/route.js:137:13)
+    at next (/home/ldrbx/.nvm/versions/node/v16.15.1/lib/node_modules/firebase-tools/node_modules/express/lib/router/route.js:131:14)
+    at next (/home/ldrbx/.nvm/versions/node/v16.15.1/lib/node_modules/firebase-tools/node_modules/express/lib/router/route.js:131:14) {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"TypeError: Cannot read properties of undefined (reading 'NUMBER')\n    at /home/ldrbx/hackathons/eth-safari/functions/index.js:17:32\n    at cloudFunction (/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-functions/lib/providers/https.js:50:16)\n    at /home/ldrbx/.nvm/versions/node/v16.15.1/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:592:16\n    at runFunction (/home/ldrbx/.nvm/versions/node/v16.15.1/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:565:15)\n    at runHTTPS (/home/ldrbx/.nvm/versions/node/v16.15.1/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:591:11)\n    at /home/ldrbx/.nvm/versions/node/v16.15.1/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:534:23\n    at Layer.handle [as handle_request] (/home/ldrbx/.nvm/versions/node/v16.15.1/lib/node_modules/firebase-tools/node_modules/express/lib/router/layer.js:95:5)\n    at next (/home/ldrbx/.nvm/versions/node/v16.15.1/lib/node_modules/firebase-tools/node_modules/express/lib/router/route.js:137:13)\n    at next (/home/ldrbx/.nvm/versions/node/v16.15.1/lib/node_modules/firebase-tools/node_modules/express/lib/router/route.js:131:14)\n    at next (/home/ldrbx/.nvm/versions/node/v16.15.1/lib/node_modules/firebase-tools/node_modules/express/lib/router/route.js:131:14)"}}
+[warn] ⚠  Your function was killed because it raised an unhandled error. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Your function was killed because it raised an unhandled error."}}
+[debug] [2022-09-14T04:25:40.693Z] [worker-us-central1-helloWorld-38d98580-ec09-4501-872c-59157e78b742]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-38d98580-ec09-4501-872c-59157e78b742]: exited"}}
+[debug] [2022-09-14T04:25:40.694Z] [worker-us-central1-helloWorld-38d98580-ec09-4501-872c-59157e78b742]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-38d98580-ec09-4501-872c-59157e78b742]: FINISHED"}}
+[debug] [2022-09-14T04:25:40.695Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-09-14T04:26:09.768Z] File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers"}}
+[debug] [2022-09-14T04:26:10.771Z] Validating nodejs source
+[debug] [2022-09-14T04:26:12.280Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "twilio": "^3.82.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-09-14T04:26:12.280Z] Building nodejs source
+[debug] [2022-09-14T04:26:12.280Z] Analyzing nodejs backend spec
+[debug] [2022-09-14T04:26:12.281Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-09-14T04:26:12.455Z] Serving at port 9005
+
+[debug] [2022-09-14T04:26:12.560Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-09-14T04:26:12.567Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2022-09-14T04:26:15.318Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-09-14T04:26:15.319Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-09-14T04:26:15.319Z] Accepted request GET /safari-text/us-central1/helloWorld --> us-central1-helloWorld
+[debug] [2022-09-14T04:26:15.319Z] [worker-pool] Cleaned up workers for us-central1-helloWorld: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-helloWorld: 1 --> 0"}}
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2022-09-14T04:26:15.333Z] [worker-pool] addWorker(us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-helloWorld)"}}
+[debug] [2022-09-14T04:26:15.334Z] [worker-pool] Adding worker with key us-central1-helloWorld, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-helloWorld, total=1"}}
+[debug] [2022-09-14T04:26:15.334Z] [worker-pool] submitWork(triggerId=us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-helloWorld)"}}
+[debug] [2022-09-14T04:26:15.334Z] [worker-us-central1-helloWorld-869da59c-bb81-4b52-9512-c3ec606f7f98]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-869da59c-bb81-4b52-9512-c3ec606f7f98]: BUSY"}}
+[debug] [2022-09-14T04:26:16.355Z] [runtime-status] [6433] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6433] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-09-14T04:26:16.358Z] [runtime-status] [6433] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.23.0","resolution":"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6433] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.23.0\",\"resolution\":\"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-09-14T04:26:16.358Z] [runtime-status] [6433] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6433] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-09-14T04:26:16.360Z] [runtime-status] [6433] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.23.0","resolution":"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6433] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.23.0\",\"resolution\":\"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-09-14T04:26:16.418Z] [runtime-status] [6433] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6433] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-09-14T04:26:16.418Z] [runtime-status] [6433] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.23.0","resolution":"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6433] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.23.0\",\"resolution\":\"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2022-09-14T04:26:16.419Z] [runtime-status] [6433] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.23.0","resolution":"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6433] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.23.0\",\"resolution\":\"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-09-14T04:26:16.421Z] [runtime-status] [6433] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6433] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-09-14T04:26:16.421Z] [runtime-status] [6433] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.23.0","resolution":"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6433] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.23.0\",\"resolution\":\"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-09-14T04:26:16.422Z] [runtime-status] [6433] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6433] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/ldrbx/hackathons/eth-safari/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2022-09-14T04:26:16.422Z] [runtime-status] [6433] Functions runtime initialized. {"cwd":"/home/ldrbx/hackathons/eth-safari/functions","node_version":"16.15.1"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6433] Functions runtime initialized. {\"cwd\":\"/home/ldrbx/hackathons/eth-safari/functions\",\"node_version\":\"16.15.1\"}"}}
+[debug] [2022-09-14T04:26:16.473Z] [runtime-status] [6433] Beginning invocation function helloWorld! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6433] Beginning invocation function helloWorld!"}}
+[info] i  functions: Beginning execution of "helloWorld" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Beginning execution of \"helloWorld\""}}
+[debug] [2022-09-14T04:26:16.474Z] [runtime-status] [6433] Running helloWorld in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6433] Running helloWorld in signature http"}}
+[debug] [2022-09-14T04:26:16.483Z] [runtime-status] [6433] Listening to port: /tmp/fire_emu_b1f65bf9dc7ae4f7.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6433] Listening to port: /tmp/fire_emu_b1f65bf9dc7ae4f7.sock"}}
+[debug] [2022-09-14T04:26:16.564Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-09-14T04:26:16.565Z] [functions] Got req.url=/safari-text/us-central1/helloWorld, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/safari-text/us-central1/helloWorld, mapping to path=/"}}
+[debug] [2022-09-14T04:26:16.569Z] [runtime-status] [6433] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6433] Ephemeral server handling GET request"}}
+[info] >  {"structuredData":true,"severity":"INFO","message":"Hello logs!"} {"user":{"structuredData":true,"severity":"INFO","message":"Hello logs!"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"structuredData\":true,\"severity\":\"INFO\",\"message\":\"Hello logs!\"}"}}
+[debug] [2022-09-14T04:26:16.697Z] [runtime-status] [6433] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [6433] Ephemeral server survived."}}
+[info] i  functions: Finished "helloWorld" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Finished \"helloWorld\" in ~1s"}}
+[debug] [2022-09-14T04:26:16.701Z] [worker-us-central1-helloWorld-869da59c-bb81-4b52-9512-c3ec606f7f98]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-869da59c-bb81-4b52-9512-c3ec606f7f98]: IDLE"}}
+[debug] [2022-09-14T04:26:16.701Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  SM4d2c6d1c1e959819f9c2a34fdf989267 {"user":"SM4d2c6d1c1e959819f9c2a34fdf989267","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"\u001b[90m> \u001b[39m SM4d2c6d1c1e959819f9c2a34fdf989267"}}
+[debug] [2022-09-14T04:32:03.814Z] File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/ldrbx/hackathons/eth-safari/functions/index.js changed, reloading triggers"}}
+[debug] [2022-09-14T04:32:04.815Z] Validating nodejs source
+[debug] [2022-09-14T04:32:06.637Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "twilio": "^3.82.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-09-14T04:32:06.637Z] Building nodejs source
+[debug] [2022-09-14T04:32:06.637Z] Analyzing nodejs backend spec
+[debug] [2022-09-14T04:32:06.638Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-09-14T04:32:06.850Z] Serving at port 9005
+
+[debug] [2022-09-14T04:32:06.967Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-09-14T04:32:06.976Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2022-09-14T04:32:06.989Z] [worker-pool] Shutting down IDLE worker (us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-helloWorld)"}}
+[debug] [2022-09-14T04:32:06.990Z] [worker-us-central1-helloWorld-869da59c-bb81-4b52-9512-c3ec606f7f98]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-869da59c-bb81-4b52-9512-c3ec606f7f98]: FINISHING"}}
+[debug] [2022-09-14T04:32:06.997Z] [worker-us-central1-helloWorld-869da59c-bb81-4b52-9512-c3ec606f7f98]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-869da59c-bb81-4b52-9512-c3ec606f7f98]: exited"}}
+[debug] [2022-09-14T04:32:06.997Z] [worker-us-central1-helloWorld-869da59c-bb81-4b52-9512-c3ec606f7f98]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-869da59c-bb81-4b52-9512-c3ec606f7f98]: FINISHED"}}
