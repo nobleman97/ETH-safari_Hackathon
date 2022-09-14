@@ -1,3 +1,3 @@
-## Query Your Wallet Balance with SMS/USSD
+## Need to update Readme with firebase installation instructions
 
 More info here...
