@@ -1,3 +1,7 @@
 ## Query Your Wallet Balance with SMS/USSD
 
-More info here...
+- To start the Frontend, run:
+
+```
+sudo yarn start
+```
