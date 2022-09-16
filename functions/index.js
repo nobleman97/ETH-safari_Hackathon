@@ -1,5 +1,7 @@
+/* eslint-disable */
+
 // Loads environment variables from .env file
-require('dotenv').config()
+require("dotenv").config();
 
 // Cloud Functions SDK to create Cloud Functions and set up triggers
 const functions = require("firebase-functions");
@@ -10,7 +12,11 @@ admin.initializeApp();
 
 // Twilio helper library for creating and recieving SMS notifications
 const twilio = require("twilio")();
-const MessagingResponse = require('twilio').twiml.MessagingResponse;
+const MessagingResponse = require("twilio").twiml.MessagingResponse;
+
+// Ethers.js library to query the etheruem blockhain
+const ethers = require("ethers");
+const provider = new ethers.providers.getDefaultProvider();
 
 // Listens for new accounts added to /accounts/:documentId
 // and sends an onboarding SMS to the associated phone numbers
@@ -31,14 +37,15 @@ exports.inboundSMS = functions.https.onRequest(async (request, response) => {
 	const sender = request.body.From;
 	const address = await getAddress(sender);
 	if (address) {
-		const body = request.body.Body.toUpperCase();
+		const body = request.body.Body.toUpperCase().trim();
 		const reply = new MessagingResponse();
 		switch (body) {
 			case 'BALANCE':
-				;
+				const balance = await provider.getBalance(address);
+				reply.message(`Your Ethereum account has a balance of ${Number.parseFloat(ethers.utils.formatEther(balance)).toFixed(6)} ETH or ${(ethers.utils.formatEther(balance) * 1447.41).toFixed(2)} USD`);
 				break;
 			case 'ALERTS':
-				;
+				reply.message(`This command will subscribe to Eth price alerts. Reply STOP to unsubscribe. (Not yet implemented.)`);
 				break;
 			case 'TRIGGER':
 				reply.message(`This command will trigger a pre-signed transaction after asking you for confirmation. (Not yet implemented.)`);
@@ -49,14 +56,6 @@ exports.inboundSMS = functions.https.onRequest(async (request, response) => {
 		return response.type("text/xml").send(reply.toString());
 	}
 	response.sendStatus(401); // Only registered users can use the service
-});
-
-exports.helloServer = functions.https.onRequest((request, response) => { 
-  // When our twilio number recienves an inbound SMS
-  const twiml = new MessagingResponse();
-  // Our backend responds with:
-  twiml.message("The Robots are coming! Head for the hills!");
-  response.type("text/xml").send(twiml.toString());
 });
 
 // Get Ethereum addresss associated with a phone number
