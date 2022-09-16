@@ -23,9 +23,3 @@ Safari Text uses web3-onboard on the front-end to connect to Ethereum wallets, F
 ## Install Instruction
 
 Hold tight! We're still working on this.
-
-
-
-```
-sudo yarn start
-```
