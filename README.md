@@ -3,17 +3,7 @@
 Safari Text is a service that allows users of Ethereum non-custodial Ethereum wallets to query and interact with their accounts using SMS.
 
 ## Demo
-
-<center>
- <iframe width="560" 
-         height="315" 
-         src="YOUTUBE_LINK" 
-         title="https://youtu.be/rpLsSL4uHjY" 
-         frameborder="0" 
-         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-         allowfullscreen>
- </iframe>
-</center>
+https://youtu.be/rpLsSL4uHjY
 
 
 ## How it's built
